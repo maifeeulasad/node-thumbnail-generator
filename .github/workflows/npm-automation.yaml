@@ -1,0 +1,24 @@
+name: Publish to NPM
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    container:
+      image: maifeeulasad/node-fileutils:latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: 'Installing deps'
+        run: npm i
+      - name: 'Build'
+        run: npm run build
+      - name: 'Publish'
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
