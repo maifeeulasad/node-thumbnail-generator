@@ -2,7 +2,7 @@
   "name": "node-thumbnail-generator",
   "version": "0.0.4",
   "description": "thumbnail generator for files in node env",
-  "main": "lib/index.ts",
+  "main": "lib/index.js",
   "scripts": {
     "prepare": "npm run build",
     "build": "tsc && npm run build:copy",
