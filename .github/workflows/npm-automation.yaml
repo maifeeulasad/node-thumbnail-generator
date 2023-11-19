@@ -8,12 +8,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    container:
-      image: maifeeulasad/node-fileutils:20231119.1
+    strategy:
+      matrix:
+        node-version: [16.x]
+        registry-url: ['https://registry.npmjs.org']
 
     steps:
       - uses: actions/checkout@v2
-
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          registry-url: ${{ matrix.registry-url }}
       - name: 'Installing deps'
         run: npm i
       - name: 'Build'
