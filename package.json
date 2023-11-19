@@ -5,8 +5,9 @@
   "main": "lib/index.js",
   "scripts": {
     "prepare": "npm run build",
-    "build": "tsc && npm run build:copy",
-    "build:copy": "node copy-ext2mime.js"
+    "build": "tsc && npm run build:copy && npm run build:tools",
+    "build:copy": "node copy-ext2mime.js",
+    "build:tools": "node install-tools.js"
   },
   "repository": {
     "type": "git",
