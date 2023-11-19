@@ -5,7 +5,8 @@
   "main": "lib/index.ts",
   "scripts": {
     "prepare": "npm run build",
-    "build": "tsc"
+    "build": "tsc && npm run build:copy",
+    "build:copy": "node copy-ext2mime.js"
   },
   "repository": {
     "type": "git",
