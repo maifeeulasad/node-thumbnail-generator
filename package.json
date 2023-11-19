@@ -1,6 +1,6 @@
 {
   "name": "node-thumbnail-generator",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "thumbnail generator for files in node env",
   "main": "lib/index.ts",
   "scripts": {
