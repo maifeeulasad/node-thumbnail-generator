@@ -23,7 +23,8 @@
   },
   "homepage": "https://github.com/maifeeulasad/node-thumbnail-generator#readme",
   "devDependencies": {
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "@types/node": "^20.9.1"
   },
   "files": ["lib"]
 }
